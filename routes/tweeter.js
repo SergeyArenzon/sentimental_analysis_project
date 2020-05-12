@@ -13,7 +13,7 @@ var client = new Twitter({
 router.get('/', (req, res, next) => {    
     client.get('search/tweets', {q: 'netanyahu'}, function(error, tweets, response) {
         console.log(tweets);
-     });
+    });
 
 });
 
