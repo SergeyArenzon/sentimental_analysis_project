@@ -11,6 +11,7 @@ document.getElementById('button-addon1').addEventListener('click', e => {
         headers: new Headers({ 'Content-Type': 'application/json' })
     }
 
+    
     fetch('/', options)
         .then(response => response.json())
         .then(({analysis}) => {
