@@ -2,12 +2,13 @@
 var express = require('express');
 var router = express.Router();
 var Twitter = require('twitter');
+require('dotenv').config();
 
 var client = new Twitter({
-    consumer_key: 'fgFMaMMgnSfd63VoXxYrHdnGl',
-    consumer_secret: '1ctcEkSoT7jLRVba3xKeufTKGPRIJzACS8tLuhPUYzWibI1gtG',
-    access_token_key: '1240329397468618768-6o86cM4Zu9DPYvYoRb2z5hb0BUhpHY',
-    access_token_secret: 'uerNCgk79p71VYVaU7TJdH2M7oKaeA3OoQqibdbxGUvzy'
+    consumer_key: process.env.CONSUMER_KEY,
+    consumer_secret: process.env.CONSUMER_SECRET,
+    access_token_key: process.env.ACCESS_TOKEN_KEY,
+    access_token_secret: process.env.ACCESS_TOKEN_SECRET
 });
 
 // exclude repeated tweets function
@@ -28,6 +29,7 @@ router.get('/', (req, res, next) => {
 
             // exclude all repeated tweets            
             var unique_tweets = tweets_list.filter(onlyUnique);
+            console.log(unique_tweets)
         }
     });
 });
