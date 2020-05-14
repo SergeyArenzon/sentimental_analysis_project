@@ -16,7 +16,7 @@ document.getElementById('button-addon1').addEventListener('click', e => {
         .then(response => response.json())
         .then(({analysis}) => {
             
-            document.getElementById('output').innerHTML = analysis
+            document.getElementById('output').innerHTML = analysis;
         })
 });
 
