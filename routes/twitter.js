@@ -42,6 +42,14 @@ router.post('/', (req, res, next) => {
         else{
             var tweets_list = [];
 
+            // contains pos/neg tweets scores
+            var output = {
+                positive: [],
+                negative: [],
+                neutral: []
+               
+            }
+
             // loop over tweeted users and push them to tweets_list
             tweets.statuses.forEach(user => {               
                 tweets_list.push(user.text);                 
@@ -74,15 +82,33 @@ router.post('/', (req, res, next) => {
                 const analysis = analyzer.getSentiment(filteredInput); // gets value from sentence
 
                 tweetsValue.push(analysis);
+
+                // sort tweets scores by pos/neg
+                if(analysis = 0){
+                    output.neutral.push(analysis);
+                }
+                else if(analysis > 0){
+                    output.positive.push(analysis);
+                }
+                else {
+                    output.negative.push(analysis);
+                }
                 
             });
-            const reducer = (accumulator, currentValue) => accumulator + currentValue;
+            const reducer = (accumulator, currentValue) => accumulator + currentValue; //summing scores func
             
+            
+
             // normalized value = sum of vals / num of vals
             var normalized = (tweetsValue.reduce(reducer) / tweetsValue.length);
-            console.log(normalized)
-            console.log("DONE")
-            res.status(200).json({normalized});
+
+            output.normalized = normalized;
+
+            console.log(output);
+            res.status(200).json({output})
+        //     console.log(normalized)
+        //     console.log("DONE")
+        //     res.status(200).json({normalized});
         }
     });
 });
