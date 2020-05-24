@@ -1,17 +1,21 @@
 <%- include('partials/header.ejs') %> 
 
-<div class="container" >
-    <form action="/" method="POST">
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-            <button class="btn btn-outline-secondary" type="submit" id="searchTwitterBtn">Button</button>
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container" >
+        <form action="/" method="POST">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                <button class="btn btn-outline-secondary" type="submit" id="searchTwitterBtn">Button</button>
+                </div>
+                <input type="text" id="twitterInput" class="form-control" name="input" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
             </div>
-            <input type="text" id="twitterInput" class="form-control" name="input" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
-        </div>
-    </form>
-    <div id="twitterOutput">test</div>
-    <div id="moreTweetsInfo">info</div>
+        </form>
+        <div id="twitterOutput">test</div>
+        <div id="moreTweetsInfo">info</div>
+    </div>
 </div>
+
 
 
 <script type="text/javascript" src="/javascripts/twitterAnalysis.js"></script> 
