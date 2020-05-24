@@ -5,6 +5,9 @@
 
 document.getElementById('button-addon1').addEventListener('click', e => {
     e.preventDefault();
+
+    var loader = document.getElementById('loader');
+    loader.style.display = "inline-block";
     var input = document.getElementById('userInput').value;
 
     const options = {
@@ -17,7 +20,7 @@ document.getElementById('button-addon1').addEventListener('click', e => {
     fetch('/', options)
         .then(response => response.json())
         .then(({analysis}) => {
-            
+            loader.style.display = "none"
             document.getElementById('output').innerHTML = analysis;
         })
 });
