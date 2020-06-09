@@ -12,9 +12,11 @@ const SpellCorrector = require('spelling-corrector');
 const SW = require('stopword');
 
 
+
 const spellCorrector = new SpellCorrector();
 spellCorrector.loadDictionary();
 require('dotenv').config();
+
 
 var client = new Twitter({
     consumer_key: process.env.CONSUMER_KEY,
@@ -22,6 +24,7 @@ var client = new Twitter({
     access_token_key: process.env.ACCESS_TOKEN_KEY,
     access_token_secret: process.env.ACCESS_TOKEN_SECRET
 });
+
 
 // exclude repeated tweets function
 function onlyUnique(value, index, self) { 
@@ -84,7 +87,7 @@ router.post('/', (req, res, next) => {
                 tweetsValue.push(analysis);
 
                 // sort tweets scores by pos/neg
-                if(analysis = 0){
+                if(analysis === 0){
                     output.neutral.push(analysis);
                 }
                 else if(analysis > 0){
