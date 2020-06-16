@@ -50,7 +50,6 @@ router.post('/', (req, res, next) => {
                 positive: [],
                 negative: [],
                 neutral: []
-               
             }
 
             // loop over tweeted users and push them to tweets_list

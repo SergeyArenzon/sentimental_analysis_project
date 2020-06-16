@@ -1,4 +1,19 @@
 <%- include('partials/header.ejs') %> 
 
-<h1>!!!!!!!!!!!!!!!!!</h1>
+<div class="jumbotron jumbotron-fluid">
+    <div class="container" >
+        <form action="/url" method="POST">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                </div>
+                <input type="text" id="urlInput" class="form-control" name="input" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                <button class="btn btn-outline-secondary" type="submit" id="searchTwitterBtn">Button</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
 <%- include('partials/footer.ejs') %> 

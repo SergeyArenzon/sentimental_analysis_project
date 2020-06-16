@@ -13,12 +13,12 @@ router.get('/', function(req, res, next){
     res.render('url');
 });
 
-
 router.post('/', function(req, res, next) {
+    
     // User input URL
-    const URL_TO_PARSE = "https://edition.cnn.com/2020/06/01/politics/trump-white-house-racial-unrest-leadership/index.html";
+    const URL_TO_PARSE = req.body.input;
 
-    // Make a request to get the HTML of the page
+    //Make a request to get the HTML of the page
     request(URL_TO_PARSE, (err, response, html) => {
         if (err) throw new Error(err);
 
