@@ -8,16 +8,18 @@ var request = require("request");
 const cheerio = require('cheerio');
 var textVersion = require("textversionjs");
 
-
 router.get('/', function(req, res, next){
     res.render('url');
 });
 
 router.post('/', function(req, res, next) {
+    
+
+    const { url } = req.body;
 
     // User input URL
-    const URL_TO_PARSE = req.body.input;
- 
+    const URL_TO_PARSE = url;
+    
     //Make a request to get the HTML of the page
     request(URL_TO_PARSE, (err, response, html) => {
         if (err) throw new Error(err);
@@ -28,14 +30,10 @@ router.post('/', function(req, res, next) {
         var text = ($("body").text());
         // Remove tags and keep only textContent
         // Done text for analysing
-        var noTags = textVersion(text); 
-        console.log(noTags)
-
-
-
-
-
-   });  
+        var input = textVersion(text);
+        
+        console.log(input) 
+    });
 });
 
 
