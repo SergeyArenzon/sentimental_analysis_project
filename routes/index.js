@@ -46,7 +46,7 @@ router.post('/', (req, res) => {
   // AFFIN is vocabulary of words rated by -3 to 3
   // analyzer.getSentimental summing the polarity of each word and normalizing with the length of the sentence
   const analyzer = new SentimentAnalyzer('English', PorterStemmer, 'afinn'); 
-  const analysis = analyzer.getSentiment(filteredInput); // 
+  const analysis = analyzer.getSentiment(filteredInput); 
 
   res.status(200).json({analysis});
   

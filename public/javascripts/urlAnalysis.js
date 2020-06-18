@@ -20,8 +20,9 @@ document.getElementById('confirmUrlBtn').addEventListener('click', e => {
       body: JSON.stringify({url}),
     })
     .then(response => response.json())
-    .then(analysis => {
-    //   console.log(analysis)
+    .then(({analysis} )=> {
+      console.log('<%= analysis %>');
+      document.getElementById('output').innerHTML = analysis
     })
     .catch((error) => {
       console.error('Error:', error);
