@@ -51,16 +51,14 @@ router.post('/', (req, res, next) => {
                 negative: [],
                 neutral: []
             }
-
             // loop over tweeted users and push them to tweets_list
             tweets.statuses.forEach(user => {               
-                tweets_list.push(user.text);                 
+                tweets_list.push(user.text);              
             });
-
+            console.log(tweets_list)
             // exclude all repeated tweets            
             var unique_tweets = tweets_list.filter(onlyUnique);
             var tweetsValue = []
-
             unique_tweets.forEach(tweet => {              
                 const  input  = tweet; // get the user input
                 const lexedInput = aposToLexForm(input); // fixes examples: i'am to i am 

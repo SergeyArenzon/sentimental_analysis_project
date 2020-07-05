@@ -3,10 +3,6 @@
 // ------------
 
 
-
-
-
-
 document.getElementById('confirmUrlBtn').addEventListener('click', e => {
     e.preventDefault();
 
@@ -22,7 +18,7 @@ document.getElementById('confirmUrlBtn').addEventListener('click', e => {
     .then(response => response.json())
     .then(({analysis} )=> {
       console.log('<%= analysis %>');
-      document.getElementById('output').innerHTML = analysis
+      document.getElementById('urlOutput').innerHTML = analysis
     })
     .catch((error) => {
       console.error('Error:', error);
