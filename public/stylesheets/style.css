@@ -133,7 +133,7 @@ body {
     background-color: rgba(17, 155, 201, 0.7);
 }
 .box:hover {
-  width: 70%!important;
+  width: 150%!important;
   font-size: 18px;
   
   .box__inner {
