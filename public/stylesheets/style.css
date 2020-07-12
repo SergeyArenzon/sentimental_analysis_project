@@ -4,6 +4,11 @@ body {
   text-align: -moz-center;
 }
 
+/* Round inputs style */
+.form-control {
+  border-radius: 18px;
+}
+
 #freeTextContainer {
   align-items: center;
 }
@@ -28,9 +33,11 @@ body {
   width: 75%;
 }
 
-#userInput {
+/* #userInput {
   border-radius: 18px;
-}
+} */
+
+
 
 /* LOADER */
 #loader {
