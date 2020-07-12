@@ -22,20 +22,22 @@ const box1unHovered = document.getElementById('box1').addEventListener('mouseout
 
 // BOX2 HOVER HANDLER
 const box2 = document.getElementById('box2').addEventListener('mouseover', () => {
-    let box2Div = document.getElementById('box2Div');
-    let box2hover = document.getElementById('box2hover');
+    const box2Div = document.getElementById('box2Div');
+    const box2hover = document.getElementById('box2hover');
     box2hover.style["display"]= "block";
     
 });
 
 const box2unHovered = document.getElementById('box2').addEventListener('mouseout', () => {
-    let box2Div = document.getElementById('box2Div');
-    let box2hover = document.getElementById('box2hover');
+    const box2Div = document.getElementById('box2Div');
+    const box2hover = document.getElementById('box2hover');
     box2hover.style["display"]= "none";
     
 });
 
 // BOX3 HOVER HANDLER
 const box3 = document.getElementById('box3').addEventListener('mouseover', () => {
-    
+    const box2Div = document.getElementById('box2Div');
+    const box2hover = document.getElementById('box2hover');
+    box2hover.style["display"]= "none";
 });

@@ -38,7 +38,6 @@
                         <form action="/" method="POST">
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
-                                
                                 </div>
                                 <input type="text" id="twitterInput" class="form-control" name="input" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
                                 <button class="btn btn-outline-secondary" type="submit" id="searchTwitterBtn">Button</button>
@@ -53,7 +52,13 @@
             <div class="box__inner" id="box3">
                 <h1>URL</h1>
                 <div id='box3Div'>
-                    Get your URL article analyzed  
+                    <div id="box3noHover">
+                        Get your URL article analyzed 
+                    </div>
+                    <div id="box3hover">
+                        <input type="text" id="urlInput" class="form-control" name="input" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                        <button class="btn btn-outline-secondary" type="submit" id="confirmUrlBtn">Button</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -85,7 +90,7 @@
             <span class="loader-inner"></span>
         </span>
 
-        <div id="output">loading</div>
+        <div id="output">Loading</div>
     </div>
 
 
@@ -102,16 +107,16 @@
         </div>
     </form> -->
     <div id="twitterOutput">
-        <h5 id="avg"></h5>
-        <h5 id="positive"></h5>
-        <h5 id="negative"></h5>
+        <h5 id="avg">Loading</h5>
+        <h5 id="positive">Loading</h5>
+        <h5 id="negative">Loading</h5>
     </div>
 
 
     <!-- url  -->
     <h1>URL</h1>
-    <input type="text" id="urlInput" class="form-control" name="input" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
-    <button class="btn btn-outline-secondary" type="submit" id="confirmUrlBtn">Button</button>
+    <!-- <input type="text" id="urlInput" class="form-control" name="input" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+    <button class="btn btn-outline-secondary" type="submit" id="confirmUrlBtn">Button</button> -->
     <h5 id="urlOutput"></h5>
 </div>
 
