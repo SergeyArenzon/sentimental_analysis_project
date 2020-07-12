@@ -111,7 +111,7 @@ body {
   background: #119bc9;
   overflow: hidden;
   display: flex;
-  
+  border-radius: 25px;
   .box {
     width: 25%;
     float: left;
