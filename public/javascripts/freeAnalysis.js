@@ -5,13 +5,12 @@
 
 // hides all irrelevant outputs divs after click
 hideDivs = () => {
-    //let urlDiv = document.getElementById('urlDiv');
+    let urlDiv = document.getElementById('urlDiv');
     let twitterDiv = document.getElementById('twitterDiv');
     twitterDiv.style.display = 'none';
-    //urlDiv.style.display = 'none';
+    urlDiv.style.display = 'none';
 
 }
-
 
 
 document.getElementById('button-addon1').addEventListener('click', e => {
@@ -29,12 +28,9 @@ document.getElementById('button-addon1').addEventListener('click', e => {
     fetch('/', options)
         .then(response => response.json())
         .then(({analysis}) => {
-            
-            
             // show freeDiv 
             document.getElementById('freeDiv').style.display = 'inline';
-            
-
+        
             document.getElementById('output').innerHTML = analysis;
         })
 });

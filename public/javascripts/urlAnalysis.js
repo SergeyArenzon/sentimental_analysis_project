@@ -5,12 +5,12 @@
 
 // hides all irrelevant outputs divs after click
 hideDivs = () => {
-  let freeDiv = document.getElementById('freeDiv');
+  let freeDiv = document.getElementById('freeDiv')
   let twitterDiv = document.getElementById('twitterDiv');
   twitterDiv.style.display = 'none';
   freeDiv.style.display = 'none';
+  console.log(twitterDiv);
 }
-
 
 document.getElementById('confirmUrlBtn').addEventListener('click', e => {
     e.preventDefault();
@@ -18,7 +18,7 @@ document.getElementById('confirmUrlBtn').addEventListener('click', e => {
     hideDivs(); // hides irrelevant output divs on click
 
     const url = document.getElementById('urlInput').value;  
-    console.log(url) 
+    //console.log(url) 
     fetch('/url', {
       method: 'POST', // or 'PUT'
       headers: {
@@ -28,8 +28,9 @@ document.getElementById('confirmUrlBtn').addEventListener('click', e => {
     })
     .then(response => response.json())
     .then(({analysis} )=> {
-      console.log('<%= analysis %>');
 
+      // show urlDiv 
+      document.getElementById('urlDiv').style.display = 'inline';
     
       document.getElementById('urlOutput').innerHTML = analysis
     })
