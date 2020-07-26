@@ -29,6 +29,10 @@ document.getElementById('searchTwitterBtn').addEventListener('click', e => {
         
         var twitterOutput = document.getElementById('negative');
         twitterOutput.innerHTML = "Negative: " + output.negative.length;
+
+        var twitterOutput = document.getElementById('neutral');
+        twitterOutput.innerHTML = "Neutral: " + output.neutral.length;
+
         //document.getElementById('twitterOutput').innerHTML = output.normalized;
         // var moreTweetsInfo = document.getElementById('moreTweetsInfo');
         // var posH1 = document.createElement('h1');
