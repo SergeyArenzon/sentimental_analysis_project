@@ -4,26 +4,21 @@
 
 
 
-// hides all irrelevant outputs divs after click
-hideDivs = () => {
-    
-    let urlDiv = document.getElementById('urlDiv');
-    let freeDiv = document.getElementById('freeDiv');
-    urlDiv.style.display = 'none';
-    freeDiv.style.display = 'none';
-}
-
 
 
 
 document.getElementById('searchTwitterBtn').addEventListener('click', e => {
     e.preventDefault();
 
-    hideDivs(); // hides irrelevant outputs on click
 
+    // hides all irrelevant outputs divs after click
+    let urlDiv = document.getElementById('urlDiv');
+    let freeDiv = document.getElementById('freeDiv');
+    urlDiv.style.display = 'none';
+    freeDiv.style.display = 'none';
+
+    
     var twitterSearch = document.getElementById('twitterInput').value;
-
-    // console.log(twitterSearch)
 
     fetch("/twitter", {
     method: "POST",
