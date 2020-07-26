@@ -3,8 +3,19 @@
 // ------------
 
 
+// hides all irrelevant outputs divs after click
+hideDivs = () => {
+  let freeDiv = document.getElementById('freeDiv');
+  let twitterDiv = document.getElementById('twitterDiv');
+  twitterDiv.style.display = 'none';
+  freeDiv.style.display = 'none';
+}
+
+
 document.getElementById('confirmUrlBtn').addEventListener('click', e => {
     e.preventDefault();
+
+    hideDivs(); // hides irrelevant output divs on click
 
     const url = document.getElementById('urlInput').value;  
     console.log(url) 

@@ -3,8 +3,21 @@
 // ------------------------
 
 
+// hides all irrelevant outputs divs after click
+hideDivs = () => {
+    let urlDiv = document.getElementById('urlDiv');
+    let twitterDiv = document.getElementById('twitterDiv');
+    twitterDiv.style.display = 'none';
+    urlDiv.style.display = 'none';
+  }
+  
+
+
 document.getElementById('button-addon1').addEventListener('click', e => {
     e.preventDefault();
+
+    hideDivs(); // hides irrelevant divs on click
+
 
     var loader = document.getElementById('loader');
     loader.style.display = "inline-block";

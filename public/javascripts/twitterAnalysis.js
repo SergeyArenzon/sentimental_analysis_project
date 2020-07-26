@@ -6,7 +6,6 @@
 
 // hides all irrelevant outputs divs after click
 hideDivs = () => {
-
     let freeDiv = document.getElementById('freeDiv');
     let urlDiv = document.getElementById('urlDiv');
     urlDiv.style.display = 'none';
@@ -19,12 +18,7 @@ hideDivs = () => {
 document.getElementById('searchTwitterBtn').addEventListener('click', e => {
     e.preventDefault();
 
-    console.log("xxxxxxxxxxxxxxxxxxxxxxxxxxxx");
-    hideDivs();
-
-
-
-
+    hideDivs(); // hides irrelevant outputs on click
     var twitterSearch = document.getElementById('twitterInput').value;
 
     // console.log(twitterSearch)

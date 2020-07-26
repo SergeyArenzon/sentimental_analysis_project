@@ -172,7 +172,7 @@ body {
   display: none;
 }
 #freeDiv {
-  display: inline;
+  display: none;
 }
 #twitterDiv {
   display: none;
