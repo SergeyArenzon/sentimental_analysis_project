@@ -4,8 +4,26 @@
 
 
 
+// hides all irrelevant outputs divs after click
+hideDivs = () => {
+
+    let freeDiv = document.getElementById('freeDiv');
+    let urlDiv = document.getElementById('urlDiv');
+    urlDiv.style.display = 'none';
+    freeDiv.style.display = 'none';
+}
+
+
+
+
 document.getElementById('searchTwitterBtn').addEventListener('click', e => {
     e.preventDefault();
+
+    console.log("xxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+    hideDivs();
+
+
+
 
     var twitterSearch = document.getElementById('twitterInput').value;
 
@@ -21,6 +39,10 @@ document.getElementById('searchTwitterBtn').addEventListener('click', e => {
     })
     .then(response => response.json())
     .then(({output}) => {
+
+        const showTwitterOutput = document.getElementById('twitterDiv');
+        showTwitterOutput.style.display = 'inline';
+
         var twitterOutput = document.getElementById('avg');
         twitterOutput.innerHTML = "Avg: " + output.normalized;
         
