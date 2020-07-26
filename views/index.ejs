@@ -75,29 +75,31 @@
 <!-- ------- -->
 <div class="jumbotron jumbotron-fluid">
     <div id="freeTextContainer" class="container">
-        <h1>FREE TEXT</h1>
-        <!-- <form action="/" method="POST">
-            <div id="inputDiv" class="input-group mb-3">
-                <input type="text" id="userInput" class="form-control" name="input" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+        <div id=freeDiv display="none">
+                <h1>FREE TEXT</h1>
+            <!-- <form action="/" method="POST">
+                <div id="inputDiv" class="input-group mb-3">
+                    <input type="text" id="userInput" class="form-control" name="input" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                </div>
+                
+                <div class="input-group-prepend">
+                    <button class="btn btn-secondary" type="submit" id="button-addon1">Button</button>
+                </div>
+            </form>
+            -->
+
+            <!-- Loading square for squar.red network -->
+            <span id="loader">
+                <span class="loader-inner"></span>
+            </span>
+
+            <div id="output">Loading</div>
             </div>
-            
-            <div class="input-group-prepend">
-                <button class="btn btn-secondary" type="submit" id="button-addon1">Button</button>
-            </div>
-        </form>
-         -->
-
-        <!-- Loading square for squar.red network -->
-        <span id="loader">
-            <span class="loader-inner"></span>
-        </span>
-
-        <div id="output">Loading</div>
-    </div>
+        </div>
+        
 
 
-    <!-- twitter -->
-    <h1>TWITTER</h1>
+   
     
     <!-- <form action="/" method="POST">
         <div class="input-group mb-3">
@@ -108,7 +110,9 @@
             <button class="btn btn-outline-secondary" type="submit" id="searchTwitterBtn">Button</button>
         </div>
     </form> -->
-    <div id="twitterOutput">
+    <div id="twitterDiv"> 
+        <!-- twitter -->
+        <h1>TWITTER</h1>
         <h5 id="avg">Loading</h5>
         <h5 id="positive">Loading</h5>
         <h5 id="negative">Loading</h5>
@@ -116,11 +120,13 @@
     </div>
 
 
-    <!-- url  -->
-    <h1>URL</h1>
-    <!-- <input type="text" id="urlInput" class="form-control" name="input" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
-    <button class="btn btn-outline-secondary" type="submit" id="confirmUrlBtn">Button</button> -->
-    <h5 id="urlOutput">Loading</h5>
+    <div id=urlDiv display="none">
+         <!-- url  -->
+        <h1>URL</h1>
+        <!-- <input type="text" id="urlInput" class="form-control" name="input" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+        <button class="btn btn-outline-secondary" type="submit" id="confirmUrlBtn">Button</button> -->
+        <h5 id="urlOutput">Loading</h5>
+    </div>
 </div>
 
 

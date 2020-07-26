@@ -9,7 +9,7 @@ document.getElementById('searchTwitterBtn').addEventListener('click', e => {
 
     var twitterSearch = document.getElementById('twitterInput').value;
 
-    console.log(twitterSearch)
+    // console.log(twitterSearch)
 
     fetch("/twitter", {
     method: "POST",
