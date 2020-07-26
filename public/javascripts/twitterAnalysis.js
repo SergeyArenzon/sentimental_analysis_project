@@ -18,7 +18,7 @@ hideDivs = () => {
 document.getElementById('searchTwitterBtn').addEventListener('click', e => {
     e.preventDefault();
 
-    //hideDivs(); // hides irrelevant outputs on click
+    hideDivs(); // hides irrelevant outputs on click
 
     var twitterSearch = document.getElementById('twitterInput').value;
 

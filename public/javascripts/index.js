@@ -9,9 +9,9 @@ hideDivs = () => {
     let twitterDiv = document.getElementById('twitterDiv');
     twitterDiv.style.display = 'none';
     //urlDiv.style.display = 'none';
-    console.log("11111111111111111")
-  }
-  
+
+}
+
 
 
 document.getElementById('button-addon1').addEventListener('click', e => {
