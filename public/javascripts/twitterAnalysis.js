@@ -18,7 +18,8 @@ hideDivs = () => {
 document.getElementById('searchTwitterBtn').addEventListener('click', e => {
     e.preventDefault();
 
-    hideDivs(); // hides irrelevant outputs on click
+    //hideDivs(); // hides irrelevant outputs on click
+
     var twitterSearch = document.getElementById('twitterInput').value;
 
     // console.log(twitterSearch)
@@ -34,7 +35,8 @@ document.getElementById('searchTwitterBtn').addEventListener('click', e => {
     .then(response => response.json())
     .then(({output}) => {
 
-        const showTwitterOutput = document.getElementById('twitterDiv');
+        let showTwitterOutput = document.getElementById('twitterDiv');
+
         showTwitterOutput.style.display = 'inline';
 
         var twitterOutput = document.getElementById('avg');
