@@ -25,7 +25,7 @@ document.getElementById('button-addon1').addEventListener('click', e => {
         body: JSON.stringify({ input }),
         headers: new Headers({ 'Content-Type': 'application/json' })
     }
-    fetch('/', options)
+    fetch('/freeText', options)
         .then(response => response.json())
         .then(({analysis}) => {
             // show freeDiv 
