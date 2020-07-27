@@ -26,6 +26,9 @@ body {
   
 }
 
+.jumbotron.jumbotron-fluid {
+  margin-top: 100px;
+}
 .jumbotron-fluid {
   border-radius: 25px;
   padding: 10px;
@@ -39,6 +42,11 @@ body {
 
 /* BOXES */
 
+.page {
+  border-radius: 25px;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+}
+
 .box-list {
   background: #119bc9;
   overflow: hidden;
@@ -49,6 +57,7 @@ body {
     float: left;
     box-sizing: border-box;
   }
+  
 }
 
 .box-list:hover {
