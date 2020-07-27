@@ -95,7 +95,7 @@ input{
   color: #fff;
   transition: all 0.5s;
   max-height: 300px;
-  /* bakcground */
+  background-image: url('http://lorempixel.com/400/300/sports');
   background-size: cover;
   width: 33.33%;
 }
@@ -104,7 +104,6 @@ input{
     padding: 20px;
     min-height: 300px;
     background-color: rgba(17, 155, 201, 0.7);
-    /* background */
 }
 .box:hover {
   width: 150%!important;
@@ -117,7 +116,7 @@ input{
 }
 
 .box:nth-child(odd) {
-
+  background-image: url('/images/text.jpg');
 }
 
 .box:nth-child(odd) .box__inner{
