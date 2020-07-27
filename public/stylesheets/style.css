@@ -4,6 +4,13 @@ body {
   text-align: -moz-center;
 }
 
+
+/* centerize input text */
+input{
+  text-align:center;
+}
+
+
 /* Round inputs style */
 .form-control {
   border-radius: 18px;
@@ -73,7 +80,7 @@ body {
   color: #fff;
   transition: all 0.5s;
   max-height: 300px;
-
+  /* bakcground */
   background-size: cover;
   width: 33.33%;
 }
@@ -82,6 +89,7 @@ body {
     padding: 20px;
     min-height: 300px;
     background-color: rgba(17, 155, 201, 0.7);
+    /* background */
 }
 .box:hover {
   width: 150%!important;
