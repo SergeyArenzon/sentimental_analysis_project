@@ -7,6 +7,7 @@ body {
 /* Round inputs style */
 .form-control {
   border-radius: 18px;
+
 }
 
 #freeTextContainer {
@@ -42,6 +43,7 @@ body {
 
 /* BOXES */
 
+/* boxes border */
 .page {
   border-radius: 25px;
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
@@ -70,7 +72,7 @@ body {
   min-height: 300px;
   color: #fff;
   transition: all 0.5s;
-  background-image: url('http://lorempixel.com/400/300/sports');
+  
   background-size: cover;
   width: 33.33%;
 }
@@ -91,7 +93,7 @@ body {
 }
 
 .box:nth-child(odd) {
-  background-image: url('http://lorempixel.com/400/300/people');
+
 }
 
 .box:nth-child(odd) .box__inner{
@@ -117,4 +119,8 @@ body {
 }
 #twitterDiv {
   display: none;
+}
+
+#urlInput {
+  width: 660px;
 }
