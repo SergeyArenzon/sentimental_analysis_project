@@ -149,9 +149,9 @@ input{
   display: none;
 }
 
-#urlInput {
+/* #urlInput {
   width: 60%;
-}
+} */
 
 .analyzeBtn {
   border: 1px solid #3498db;
