@@ -3,6 +3,9 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   text-align: -moz-center;
 }
+button:focus { 
+  outline: none; 
+}
 
 /* webcross centrlize placeholder */
 ::-webkit-input-placeholder {
