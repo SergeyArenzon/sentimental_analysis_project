@@ -154,6 +154,7 @@ input{
   cursor: pointer;
   overflow: hidden;
   border-radius: 5px;
+  z-index: 1;
 }
 
 .mybtn1 {
