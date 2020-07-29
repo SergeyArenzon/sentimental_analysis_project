@@ -221,7 +221,7 @@ input{
 
 
 .titleText {
-  width: 600px;
+  width: 100%;
   left: 50%;
   margin-left: -225px;
   height: 40px;
@@ -241,7 +241,7 @@ p {
 }
 .word {
   position: absolute;
-  width: 300px;
+  width: 100%;
   opacity: 0;
 }
 
