@@ -238,6 +238,7 @@ p {
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
   font-size: 57px;
+  padding-right: 8px;
 }
 .word {
   position: absolute;
