@@ -88,6 +88,8 @@ input{
   
 }
 
+
+
 .box-list:hover {
   .box {
     width: 20%;
@@ -132,29 +134,13 @@ input{
 }
 
 /* boxes hover/unhover */
-#box1hover{
-  display: none;
-}
-#box2hover{
-  display: none;
-}
-#box3hover{
+#box1hover, #box2hover, #box3hover, #urlDiv, #freeDiv, #twitterDiv  {
   display: none;
 }
 
-#urlDiv {
-  display: none;
-}
-#freeDiv {
-  display: none;
-}
-#twitterDiv {
-  display: none;
-}
-
-/* #urlInput {
+#urlInput {
   width: 60%;
-} */
+}
 
 .analyzeBtn {
   border: 1px solid #3498db;
