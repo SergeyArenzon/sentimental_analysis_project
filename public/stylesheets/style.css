@@ -26,6 +26,7 @@ button:focus {
 /* centerize input text */
 input{
   text-align:center;
+  margin-top: 15px;
 }
 
 
@@ -165,7 +166,7 @@ input{
   color: #3498db;
   transform: translateY(7px);
   transition: 0.4s;
-  box-shadow: 0px 0px 0px;
+  box-shadow: none;
 }
 
 .analyzeBtn::before {
