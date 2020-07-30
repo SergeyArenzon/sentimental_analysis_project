@@ -13,7 +13,7 @@ hideDivs = () => {
 }
 
 
-document.getElementById('button-addon1').addEventListener('click', e => {
+document.getElementById("freeTextConfirm").addEventListener('click', e => {
     e.preventDefault();
 
     hideDivs(); // hides irrelevant divs on click
