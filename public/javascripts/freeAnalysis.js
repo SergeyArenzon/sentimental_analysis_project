@@ -27,11 +27,14 @@ document.getElementById("freeTextConfirm").addEventListener('click', e => {
     }
     fetch('/freeText', options)
         .then(response => response.json())
-        .then(({analysis}) => {
+        .then(({analysis, pos_num, neg_num, words_num}) => {
             // show freeDiv 
             document.getElementById('freeDiv').style.display = 'inline';
-        
-            document.getElementById('output').innerHTML = analysis;
+            
+            document.getElementById('freeText_avg').innerHTML = analysis;
+            document.getElementById('freeText_pos_num').innerHTML = pos_num;
+            document.getElementById('freeText_neg_num').innerHTML = neg_num;
+            document.getElementById('freeText_words_num').innerHTML = words_num;
         })
 });
 

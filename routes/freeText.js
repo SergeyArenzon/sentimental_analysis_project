@@ -18,10 +18,6 @@ spellCorrector.loadDictionary();
 
 // post req for  sentiment analyzing from fetch
 router.post('/', (req, res) => { 
-  let pos_num = 0;
-  let neg_num = 0;
-  let words_num = 0;
-
   const { input } = req.body; // get the user input
   const lexedInput = aposToLexForm(input); // fixes examples: i'am to i am 
   const casedInput = lexedInput.toLowerCase(); //to lower case
@@ -37,16 +33,35 @@ router.post('/', (req, res) => {
   })
   const filteredInput = SW.removeStopwords(tokenizedInput); // removes unrelevant words
 
-  words_num = filteredInput.length;
+  
 
   const { SentimentAnalyzer, PorterStemmer } = natural;
 
   // AFFIN is vocabulary of words rated by -5 to 5
   // analyzer.getSentimental summing the polarity of each word and normalizing with the length of the sentence
   const analyzer = new SentimentAnalyzer('English', PorterStemmer, 'afinn'); 
-  const analysis = analyzer.getSentiment(filteredInput); 
+  // const analysis = analyzer.getSentiment(filteredInput);
 
-  res.status(200).json({analysis});
+  let pos_num = 0;
+  let neg_num = 0;
+  let words_num = 0;
+  let count = 0;
+
+  words_num = filteredInput.length;
+  
+  filteredInput.forEach(element => {
+    word_weight = analyzer.getSentiment([element]);
+    count += word_weight;
+
+    if(word_weight >= 0) {pos_num += 1;}
+    else {neg_num += 1;}
+    
+  });
+
+  analysis = count / words_num;
+
+
+  res.status(200).json({analysis, pos_num, neg_num, words_num});
   
 })
 
