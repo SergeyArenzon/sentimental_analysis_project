@@ -126,13 +126,32 @@ input{
 
 }
 
-.box:nth-child(odd) {
+/* FIRST BOX */
+.box:nth-child(1) {
   background-image: url('/images/text.jpg');
 }
 
-.box:nth-child(odd) .box__inner{
+.box:nth-child(1) .box__inner{
   background: rgba(71, 83, 157, 0.8);
 }
+/* SECOND BOX */
+.box:nth-child(2) {
+  background-image: url('/images/text.jpg');
+}
+
+.box:nth-child(2) .box__inner{
+  
+}
+
+/* THIRD BOX */
+.box:nth-child(3) {
+  /* background-image: url('/images/text.jpg'); */
+}
+
+.box:nth-child(3) .box__inner{
+  background: rgba(0, 255, 157, 0.781);
+}
+
 
 /* boxes hover/unhover */
 #box1hover, #box2hover, #box3hover, #urlDiv, #freeDiv, #twitterDiv  {
