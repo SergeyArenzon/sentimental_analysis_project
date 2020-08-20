@@ -496,7 +496,16 @@ p {
   animation: move-sad-face 4s;
   animation-iteration-count: infinite;
 }
-
+.smiley-mouth-sad--neutral {
+  background-color: white;
+  width: 70%;
+  height: 30%;
+  margin-top: 15%;
+  border-top-left-radius: 30% 100%;
+  border-top-right-radius: 30% 100%;
+  border-bottom-left-radius: 30% 100%;
+  border-bottom-right-radius: 30% 100%;
+}
 @keyframes move-sad-face {
   0% { 
     transform: translateX(0%);
@@ -521,3 +530,17 @@ p {
   }  
 }
 /* SMILEY */
+
+.column {
+  float: left;
+  width: 2px;
+  background-color: black;
+  margin-left: 7px;
+  height: 4px;
+  position: center;
+
+}
+.row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
