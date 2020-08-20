@@ -342,3 +342,169 @@ p {
   color: rgba(0, 255, 157, 0.781)
 }
 
+/* SMILEY */
+
+.smiley {
+  display: inline-block;
+  margin: 80px;
+  width: 150px;
+  height: 150px;
+  background: #fbb03b;
+  background: radial-gradient(circle at 40% 40%, #fddf18 50%, #fbb03b, orange 95%);
+  box-shadow: rgba(211, 165, 110, .4) 0 30px 30px 1px, 
+              rgb(245, 245, 245) 0 20px 10px 1px;
+  border-radius: 100%;
+  position: relative;
+}
+.smiley--sad {
+  background: linear-gradient(rgba(255, 0, 0, .4), rgba(255, 0, 0, 0) 50%), 
+              radial-gradient(circle at 40% 40%, #fddf18 50%, #fbb03b, orange 95%);
+}
+
+.smiley-face {
+  height: 100%;
+}
+.smiley-face--happy {
+  position: relative;
+  animation: move-happy-face 4s;
+  animation-iteration-count: infinite;
+}
+@keyframes move-happy-face
+{
+  0% { 
+    top: 0;
+  }
+  3% {
+    top: 4%; 
+  }
+  6% {
+    top: 4%; 
+  } 
+  9% { 
+    top: 0%;
+  }
+  100% { 
+    top: 0%;
+  }
+}
+
+.smiley-eyes {
+  width: 60%;
+  height: 13%;
+  position: relative;
+}
+.smiley-eyes--happy {
+  top: 30%;
+}
+.smiley-eyes--sad {
+  height: 15%;
+  top: 50%;
+}
+
+.smiley-eye {
+  background: #603813;
+  width: 22.5%;
+  height: 100%;
+  border-radius: 100%;
+  position: absolute;
+}
+.smiley-eye:last-child {
+  right: 0;
+}
+
+.smiley-eyes--happy .smiley-eye:last-child {
+  animation: wink 4s;
+  animation-iteration-count: infinite;
+}
+@keyframes wink {
+  0% {
+    height: 100%;
+    top: 0;
+  }
+  3% {
+    height: 20%;
+    top: 40%;
+  }
+  6% {
+    height: 20%;
+    top: 40%;
+  }
+  9% {
+    height: 100%;
+    top: 0;
+  }
+  100% {
+    height: 100%;
+    top: 0;
+  }
+}
+
+.smiley-eyes--sad .smiley-eye {
+
+  transform: rotate(7deg) scaleX(.8);
+}
+.smiley-eyes--sad .smiley-eye:last-child {
+  transform: rotate(-7deg) scaleX(.8);
+}
+
+.smiley-mouth {
+  background: #603813;
+  position: absolute;  
+}
+.smiley-mouth--happy {
+  width: 60%;
+  height: 30%;
+  top: 53%;
+  left: 20%;
+  border-bottom-left-radius: 50% 100%;
+  border-bottom-right-radius: 50% 100%;
+  overflow: hidden;
+}
+.smiley-tongue {
+  background: #c1272d;
+  width: 100%;
+  height: 60%;
+  position: absolute;
+  bottom: 0;
+  border-radius: 60% 60% 0 0;
+}
+
+.smiley-mouth--sad {
+  width: 24%;
+  height: 10%;
+  left: 38%;
+  bottom: 15%;
+  border-top-left-radius: 50% 100%;
+  border-top-right-radius: 50% 100%;
+}
+
+.smiley-face--sad {
+  animation: move-sad-face 4s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes move-sad-face {
+  0% { 
+    transform: translateX(0%);
+  }
+  3% {
+    transform: translateX(-17%);
+  }
+  5% { 
+    transform: translateX(12%);
+  }
+  8% {
+    transform: translateX(-7%);
+  }
+  10% { 
+    transform: translateX(2%);
+  }
+  13% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(0%);
+  }  
+}
+/* SMILEY */
