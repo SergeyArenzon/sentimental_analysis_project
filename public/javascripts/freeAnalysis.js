@@ -31,7 +31,9 @@ document.getElementById("freeTextConfirm").addEventListener('click', e => {
         .then(({analysis, pos_num, neg_num, words_num}) => {
             // show freeDiv 
             document.getElementById('freeDiv').style.display = 'inline';
-            // document.getElementById('feedbackSmiley').innerHTML = happySmiley;
+            if(analysis > 0 ) {document.getElementById('feedbackSmiley').innerHTML = happySmiley;}
+            else if(analysis < 0) {document.getElementById('feedbackSmiley').innerHTML = sadSmiley;}
+    
             document.getElementById('freeText_avg').innerHTML = analysis;
             document.getElementById('freeText_pos_num').innerHTML = pos_num;
             document.getElementById('freeText_neg_num').innerHTML = neg_num;
