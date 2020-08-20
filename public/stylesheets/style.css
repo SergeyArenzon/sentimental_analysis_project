@@ -396,6 +396,10 @@ p {
 .smiley-eyes--happy {
   top: 30%;
 }
+.smiley-eyes--neutral {
+  margin-top: 30%;
+
+}
 .smiley-eyes--sad {
   height: 15%;
   top: 50%;
@@ -459,6 +463,16 @@ p {
   border-bottom-left-radius: 50% 100%;
   border-bottom-right-radius: 50% 100%;
   overflow: hidden;
+}
+.smiley-mouth--neutral {
+  width: 24%;
+  height: 10%;
+  left: 38%;
+  bottom: 15%;
+  border-top-left-radius: 30% 100%;
+  border-top-right-radius: 30% 100%;
+  border-bottom-left-radius: 30% 100%;
+  border-bottom-right-radius: 30% 100%;
 }
 .smiley-tongue {
   background: #c1272d;
