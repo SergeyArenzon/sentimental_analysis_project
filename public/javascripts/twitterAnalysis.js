@@ -47,6 +47,18 @@ document.getElementById('searchTwitterBtn').addEventListener('click', e => {
         var twitterOutput = document.getElementById('neutral');
         twitterOutput.innerHTML = "Neutral: " + output.neutral.length;
 
+        var mostPosTweet = document.getElementById('mostPosTweet');
+        mostPosTweet.innerHTML = "Most positive tweet: " + output.mostPosTweet;
+
+        var mostPosNum = document.getElementById('mostPosNum');
+        mostPosNum.innerHTML = "Grade: " + output.mostPosNum;
+
+        var mostNegTweet = document.getElementById('mostNegTweet');
+        mostNegTweet.innerHTML = "Most negative tweet: " + output.mostNegTweet;
+
+        var mostNegNum = document.getElementById('mostNegNum');
+        mostNegNum.innerHTML = "Grade: " + output.mostNegNum;
+        
         //document.getElementById('twitterOutput').innerHTML = output.normalized;
         // var moreTweetsInfo = document.getElementById('moreTweetsInfo');
         // var posH1 = document.createElement('h1');
@@ -55,7 +67,6 @@ document.getElementById('searchTwitterBtn').addEventListener('click', e => {
         // negH1.innerHTML = 'neg: ' + output.negative.length;
         // moreTweetsInfo.appendChild(posH1).appendChild(negH1);
         
-       
 
 
     });

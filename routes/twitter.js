@@ -117,7 +117,10 @@ router.post('/', (req, res, next) => {
             var normalized = (tweetsValue.reduce(reducer) / tweetsValue.length);
 
             output.normalized = normalized;
-            
+            output.mostPosTweet = mostPos_mostNeg[0];
+            output.mostPosNum = mostPos_mostNeg[1];
+            output.mostNegTweet = mostPos_mostNeg[2];
+            output.mostNegNum = mostPos_mostNeg[3];
             
             console.log(mostPos_mostNeg)
             
