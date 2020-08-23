@@ -58,8 +58,8 @@ router.post('/', (req, res) => {
     
   });
 
-  analysis = count / words_num;
-
+  analysis = Math.round((count / words_num) * 100) / 100;
+  
 
   res.status(200).json({analysis, pos_num, neg_num, words_num});
   
