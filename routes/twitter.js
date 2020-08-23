@@ -17,7 +17,7 @@ const spellCorrector = new SpellCorrector();
 spellCorrector.loadDictionary();
 require('dotenv').config();
 
-
+// TWITTER DEV API KEYS
 var client = new Twitter({
     consumer_key: process.env.CONSUMER_KEY,
     consumer_secret: process.env.CONSUMER_SECRET,
@@ -55,12 +55,16 @@ router.post('/', (req, res, next) => {
             tweets.statuses.forEach(user => {               
                 tweets_list.push(user.text);              
             });
-            console.log(tweets_list)
+            // console.log(tweets_list)
             // exclude all repeated tweets            
             var unique_tweets = tweets_list.filter(onlyUnique);
             var tweetsValue = []
+
+            mostPos_mostNeg = ['', 0, '', 0]; // CONTAINS MOST POS AND MOST NEG TWEETS
+
+
             unique_tweets.forEach(tweet => {              
-                const  input  = tweet; // get the user input
+                const input  = tweet; // get the user input
                 const lexedInput = aposToLexForm(input); // fixes examples: i'am to i am 
                 const casedInput = lexedInput.toLowerCase(); //to lower case
                 const alphaOnlyInput = casedInput.replace(/[^a-zA-Z\s]+/g, ''); //removing non alphabetical
@@ -76,7 +80,7 @@ router.post('/', (req, res, next) => {
 
                 const { SentimentAnalyzer, PorterStemmer } = natural;
 
-                // AFFIN is vocabulary of words rated by -3 to 3
+                // AFFIN is vocabulary of words rated by -5 to 5
                 // analyzer.getSentimental summing the polarity of each word and normalizing with the length of the sentence
                 const analyzer = new SentimentAnalyzer('English', PorterStemmer, 'afinn'); 
                 const analysis = analyzer.getSentiment(filteredInput); // gets value from sentence
@@ -94,6 +98,16 @@ router.post('/', (req, res, next) => {
                     output.negative.push(analysis);
                 }
                 
+                if(analysis > mostPos_mostNeg[1]){
+                    mostPos_mostNeg[0] = tweet;
+                    mostPos_mostNeg[1] = analysis;
+                }
+                else if(mostPos_mostNeg[3] > analysis){
+                    mostPos_mostNeg[2] = tweet;
+                    mostPos_mostNeg[3] = analysis;
+                }
+
+
             });
             const reducer = (accumulator, currentValue) => accumulator + currentValue; //summing scores func
             
@@ -103,8 +117,12 @@ router.post('/', (req, res, next) => {
             var normalized = (tweetsValue.reduce(reducer) / tweetsValue.length);
 
             output.normalized = normalized;
+            
+            
+            console.log(mostPos_mostNeg)
+            
 
-            console.log(output);
+            // console.log(output);
             res.status(200).json({output})
         //     console.log(normalized)
         //     console.log("DONE")
