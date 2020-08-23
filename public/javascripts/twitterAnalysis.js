@@ -1,12 +1,13 @@
+
+
 // ------------
 // TWITTER PAGE 
 // ------------
 
 
-const happySmiley = '<div class="smiley"><div class="smiley-face smiley-face--happy"><div class="smiley-eyes smiley-eyes--happy"><div class="smiley-eye"></div><div class="smiley-eye"></div></div><div class="smiley-mouth smiley-mouth--happy"><div class="smiley-tongue"></div></div></div></div>';
-const sadSmiley = '<div class="smiley smiley--sad"><div class="smiley-face smiley-face--sad"><div class="smiley-eyes smiley-eyes--sad"><div class="smiley-eye"></div><div class="smiley-eye"></div></div><div class="smiley-mouth smiley-mouth--sad"></div></div></div>';
-const neutralSmiley = '<div class="smiley"><div class="smiley-face"><div class="smiley-eyes smiley-eyes--neutral"><div class="smiley-eye"></div><div class="smiley-eye"></div></div><div class="smiley-mouth smiley-mouth--neutral"><div class="smiley-mouth-sad--neutral"><div class="row"><div class="column"></div><div class="column"></div></div></div></div></div></div>';
-
+const happySmile = '<div class="smiley"><div class="smiley-face smiley-face--happy"><div class="smiley-eyes smiley-eyes--happy"><div class="smiley-eye"></div><div class="smiley-eye"></div></div><div class="smiley-mouth smiley-mouth--happy"><div class="smiley-tongue"></div></div></div></div>';
+const sadSmile = '<div class="smiley smiley--sad"><div class="smiley-face smiley-face--sad"><div class="smiley-eyes smiley-eyes--sad"><div class="smiley-eye"></div><div class="smiley-eye"></div></div><div class="smiley-mouth smiley-mouth--sad"></div></div></div>';
+const neutralSmile = '<div class="smiley"><div class="smiley-face"><div class="smiley-eyes smiley-eyes--neutral"><div class="smiley-eye"></div><div class="smiley-eye"></div></div><div class="smiley-mouth smiley-mouth--neutral"><div class="smiley-mouth-sad--neutral"><div class="row"><div class="column"></div><div class="column"></div></div></div></div></div></div>';
 
 
 document.getElementById('searchTwitterBtn').addEventListener('click', e => {
@@ -37,16 +38,16 @@ document.getElementById('searchTwitterBtn').addEventListener('click', e => {
 
         showTwitterOutput.style.display = 'inline';
 
-        // var feedbackSmiley = document.getElementById('feedbackSmiley');
-        // if(output.normalized > 0){
-        //     feedbackSmiley.innerHTML = happySmiley;
-        // }
-        // else if(output.normalized < 0) {
-        //     feedbackSmiley.innerHTML = sadSmiley;
-        // }
-        // else {
-        //     feedbackSmiley.innerHTML = neutralSmiley;
-        // }
+        var feedbackSmiley = document.getElementById('feedbackSmiley');
+        if(output.normalized > 0){
+            feedbackSmiley.innerHTML = happySmile;
+        }
+        else if(output.normalized < 0) {
+            feedbackSmiley.innerHTML = sadSmile;
+        }
+        else {
+            feedbackSmiley.innerHTML = neutralSmile;
+        }
 
 
         var twitterOutput = document.getElementById('avg');
