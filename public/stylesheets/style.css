@@ -55,7 +55,7 @@ input{
 }
 
 .jumbotron.jumbotron-fluid {
-  margin-top: 100px;
+  margin-top: 10px;
 }
 .jumbotron-fluid {
   border-radius: 25px;
@@ -549,6 +549,7 @@ p {
 
 
 .loader {
+  display:none;
   margin-top: 20px;
   position: absolute;
   top: calc(50% - 32px);

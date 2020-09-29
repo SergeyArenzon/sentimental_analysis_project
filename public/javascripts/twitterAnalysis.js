@@ -13,6 +13,7 @@ const neutralSmile = '<div class="smiley"><div class="smiley-face"><div class="s
 document.getElementById('searchTwitterBtn').addEventListener('click', e => {
     e.preventDefault();
 
+    loader = document.getElementsByClassName('loader');
 
     // hides all irrelevant outputs divs after click
     let urlDiv = document.getElementById('urlDiv');
@@ -20,6 +21,7 @@ document.getElementById('searchTwitterBtn').addEventListener('click', e => {
     urlDiv.style.display = 'none';
     freeDiv.style.display = 'none';
 
+    
     
     var twitterSearch = document.getElementById('twitterInput').value;
     var tweetsCount = document.getElementById('tweetsCount').value;
