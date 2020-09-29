@@ -40,6 +40,9 @@ document.getElementById('searchTwitterBtn').addEventListener('click', e => {
     })
     .then(response => response.json())
     .then(({output}) => {
+        
+        loader.style.display = 'none';
+
 
         let showTwitterOutput = document.getElementById('twitterDiv');
 
