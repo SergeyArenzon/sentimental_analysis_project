@@ -55,6 +55,28 @@
                                     <input type="text" id="twitterInput" class="form-control" name="input" placeholder="Enter search query" aria-label="Example text with button addon" aria-describedby="button-addon1" autocomplete="off">
                                 
                                 </div>
+                                <!-- test range -->
+                                
+                                
+                                <main>
+                                    <form oninput="output.value = Math.round(range.valueAsNumber / 1000)">
+                                      <h2>
+                                        Range slider
+                                      </h2>
+                                      <div class="range">
+                                        <input name="range" type="range" min="0" max="100000">
+                                        <div class="range-output">
+                                          <output class="output" name="output" for="range">
+                                            50
+                                          </output>
+                                        </div>
+                                      </div>
+                                    </form>
+                                  </main>
+
+
+                                <!-- test range -->
+
                                 <div class="input-group-prepend">
                                     <!-- <button class="btn btn-outline-secondary" type="submit" id="searchTwitterBtn">Button</button> -->
                                     <button class="purpleBtn myBtnPurple" type="submit" id="searchTwitterBtn">Analyze!</button>
@@ -147,11 +169,15 @@
     </div>
 </div>
 
-
+<!-- 
 <script type="text/javascript" src="/javascripts/boxHovering.js"></script>      
 <script type="text/javascript" src="/javascripts/urlAnalysis.js"></script>      
 <script type="text/javascript" src="/javascripts/twitterAnalysis.js"></script> 
 <script type="text/javascript" src="/javascripts/freeAnalysis.js"></script> 
-<script type="text/javascript" src="/javascripts/titleText.js"></script> 
+<script type="text/javascript" src="/javascripts/titleText.js"></script>  -->
+
+
+
+
 
 <%- include('partials/footer.ejs') %> 
