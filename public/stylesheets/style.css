@@ -547,9 +547,11 @@ p {
 /* loader */
 
 
+#loader {
+  display:none;
+}
 
 .loader {
-  display:none;
   margin-top: 20px;
   position: absolute;
   top: calc(50% - 32px);

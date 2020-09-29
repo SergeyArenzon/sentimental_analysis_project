@@ -13,9 +13,9 @@ const neutralSmile = '<div class="smiley"><div class="smiley-face"><div class="s
 document.getElementById('searchTwitterBtn').addEventListener('click', e => {
     e.preventDefault();
 
-    
-    loader = document.getElementsByClassName('loader');
-    loader.style.display = 'block';
+
+    var loader = document.getElementById('loader');
+    loader.style.display = 'inline';
 
     // hides all irrelevant outputs divs after click
     let urlDiv = document.getElementById('urlDiv');
