@@ -22,6 +22,9 @@ document.getElementById('searchTwitterBtn').addEventListener('click', e => {
 
     
     var twitterSearch = document.getElementById('twitterInput').value;
+    var tweetsCount = document.getElementById('tweetsCount').value;
+    
+
 
     fetch("/twitter", {
     method: "POST",
@@ -29,7 +32,7 @@ document.getElementById('searchTwitterBtn').addEventListener('click', e => {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
     },
-    body: JSON.stringify({twitterSearch})
+    body: JSON.stringify({twitterSearch, tweetsCount})
     })
     .then(response => response.json())
     .then(({output}) => {

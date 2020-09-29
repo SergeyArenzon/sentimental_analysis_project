@@ -17,6 +17,7 @@ const spellCorrector = new SpellCorrector();
 spellCorrector.loadDictionary();
 require('dotenv').config();
 
+
 // TWITTER DEV API KEYS
 var client = new Twitter({
     consumer_key: process.env.CONSUMER_KEY,
@@ -38,10 +39,10 @@ router.get('/', (req, res, next) => {
 
 router.post('/', (req, res, next) => {
     var searchQuery = req.body.twitterSearch; // search input from web page
-
+    var tweetsCount = req.body.tweetsCount;
     //api that searches tweets by q, at most 100 tweets avalible by twitter api     
-    client.get('search/tweets', {q: searchQuery, count: 10, lang: 'en'}, function(error, tweets, response) {
-        if(error){console.log(error);} 
+    client.get('search/tweets', {q: searchQuery, count: tweetsCount, lang: 'en'}, function(error, tweets, response) {
+        if(error){console.log(error);}  
         else{
             var tweets_list = [];
 
