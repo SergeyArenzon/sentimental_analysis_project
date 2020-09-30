@@ -42,11 +42,13 @@ document.getElementById('searchTwitterBtn').addEventListener('click', e => {
     .then(({output}) => {
         
         loader.style.display = 'none';
-
+        
+        document.getElementById("circle").classList.toggle('resultDivOpened');
+        
 
         let showTwitterOutput = document.getElementById('twitterDiv');
 
-        showTwitterOutput.style.display = 'inline';
+        showTwitterOutput.style.display = 'block';
 
         var feedbackSmiley = document.getElementById('feedbackSmiley');
         if(output.normalized > 0){
