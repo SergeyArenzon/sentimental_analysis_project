@@ -635,7 +635,7 @@ p {
 .resultDivOpened {
   display: block;
   animation: mymove 1.5s forwards;
-  
+  animation-timing-function: ease-out;
 }
 
 @keyframes mymove {
