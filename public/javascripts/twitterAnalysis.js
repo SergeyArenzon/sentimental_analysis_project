@@ -15,7 +15,7 @@ document.getElementById('searchTwitterBtn').addEventListener('click', e => {
 
 
     var loader = document.getElementById('loader');
-    loader.style.display = 'inline';
+    loader.style.display = 'block';
 
     // hides all irrelevant outputs divs after click
     let urlDiv = document.getElementById('urlDiv');
