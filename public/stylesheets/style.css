@@ -55,8 +55,10 @@ input{
 }
 
 .jumbotron.jumbotron-fluid {
-  margin-top: 10px;
+  margin-top: 20px;
+  display:none;
 }
+
 .jumbotron-fluid {
   border-radius: 25px;
   padding: 10px;
@@ -616,3 +618,35 @@ p {
 }
 
 /* loader */
+
+/* result div */
+
+
+.resultDiv {
+  display: none;
+  margin-top: 20px;
+  width: 100px;
+  height: 100px;
+  background: rgba(87, 87, 87, 0.705);
+  border-radius: 50%;
+  
+}
+
+.resultDivOpened {
+  display: block;
+  animation: mymove 1.5s forwards;
+  
+}
+
+@keyframes mymove {
+  
+  from {
+    width: 100px;
+    height: 100px;
+  }
+  to { 
+    width: 600px;
+    height: 800px;
+    border-radius: 3%;
+    }
+}

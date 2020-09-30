@@ -104,7 +104,6 @@
 </div>
 <!-- loader -->
 
-
 <!-- ------- -->
 <!-- OUTPUTS -->
 <!-- ------- -->
@@ -166,8 +165,19 @@
 
     
 </div>
- 
 
+<div id="circle" class="resultDiv">
+
+</div>
+<button id="circleBnt" >
+
+</button>
+
+<script type="text/javascript">
+    document.getElementById("circleBnt").addEventListener("click", () => {
+        document.getElementById("circle").classList.toggle('resultDivOpened');
+    });
+</script>
 
 <!-- 
 <script type="text/javascript" src="/javascripts/boxHovering.js"></script>      
