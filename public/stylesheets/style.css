@@ -346,6 +346,10 @@ p {
 
 /* SMILEY */
 
+#feedbackSmiley {
+  display: inline-block;
+}
+
 .smiley {
   display: inline-block;
   margin: 10px;
@@ -353,14 +357,14 @@ p {
   height: 150px;
   background: #fbb03b;
   background: radial-gradient(circle at 40% 40%, #fddf18 50%, #fbb03b, orange 95%);
-  box-shadow: rgba(211, 165, 110, .4) 0 30px 30px 1px, 
-              rgb(245, 245, 245) 0 20px 10px 1px;
+  box-shadow:10px 10git px 30px black;
+  
   border-radius: 100%;
   position: relative;
 }
 .smiley--sad {
   background: linear-gradient(rgba(255, 0, 0, .4), rgba(255, 0, 0, 0) 50%), 
-              radial-gradient(circle at 40% 40%, #fddf18 50%, #fbb03b, orange 95%);
+  radial-gradient(circle at 40% 40%, #fddf18 50%, #fbb03b, orange 95%);
 }
 
 .smiley-face {
