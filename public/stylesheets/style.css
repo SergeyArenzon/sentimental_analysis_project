@@ -661,6 +661,9 @@ p {
   width: 900px; */
   margin: 0 auto;
 }
+hr {
+  margin: 0;
+}
 .line{ 
   display:block;
   height:1px;
