@@ -636,7 +636,7 @@ p {
 }
 
 .resultDivOpened {
-  display: block;
+  display: inline-block;
   animation: mymove 0.5s forwards;
   animation-timing-function: ease-out;
 }
