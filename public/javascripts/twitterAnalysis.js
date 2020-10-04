@@ -63,21 +63,25 @@ document.getElementById('searchTwitterBtn').addEventListener('click', e => {
 
 
         var twitterOutput = document.getElementById('avg');
-        twitterOutput.innerHTML = "Avg: " + output.normalized;
+
+        const avg = "<label class=\"feedbackLable\" for=\"avgVal\">Avg</label> <h5 value=\"avgVal\">" + output.normalized + "</h5>"
+        twitterOutput.innerHTML = avg;
+
+        // twitterOutput.innerHTML = "Avg: " + output.normalized;
         
         var twitterOutput = document.getElementById('positive');
-        const positive = "<label for=\"posVal\">Positive</label> <h5 value=\"posVal\">" + output.positive.length + "</h5>"
+        const positive = "<label class=\"feedbackLable\" for=\"posVal\">Positive</label> <h5 value=\"posVal\">" + output.positive.length + "</h5>"
         twitterOutput.innerHTML = positive;
 
         // twitterOutput.innerHTML = "Positive: " + output.positive.length;
         
         var twitterOutput = document.getElementById('negative');
-        const negative = "<label for=\"negVal\">Negative</label> <h5 value=\"negVal\">" + output.negative.length + "</h5>"
+        const negative = "<label class=\"feedbackLable\" for=\"negVal\">Negative</label> <h5 value=\"negVal\">" + output.negative.length + "</h5>"
         twitterOutput.innerHTML = negative;
         // twitterOutput.innerHTML = "Negative: " + output.negative.length;
 
         var twitterOutput = document.getElementById('neutral');
-        const neutral = "<label for=\"neuVal\">Neutral</label> <h5 value=\"neuVal\">" + output.neutral.length + "</h5>"
+        const neutral = "<label class=\"feedbackLable\" for=\"neuVal\">Neutral</label> <h5 value=\"neuVal\">" + output.neutral.length + "</h5>"
         twitterOutput.innerHTML = neutral;
         // twitterOutput.innerHTML = "Neutral: " + output.neutral.length;
 

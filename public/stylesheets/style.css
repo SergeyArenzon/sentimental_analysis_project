@@ -637,7 +637,7 @@ p {
 
 .resultDivOpened {
   display: block;
-  animation: mymove 1s forwards;
+  animation: mymove 0.5s forwards;
   animation-timing-function: ease-out;
 }
 
@@ -671,3 +671,7 @@ hr {
   border-image: linear-gradient(to right, transparent 0%,   #333 50%, transparent 100%);
   border-image-slice: 1;   
 }    
+
+.feedbackLable {
+  margin: 0;
+}
