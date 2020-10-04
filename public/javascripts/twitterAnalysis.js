@@ -88,7 +88,7 @@ document.getElementById('searchTwitterBtn').addEventListener('click', e => {
 
 
         var mostPosTweet = document.getElementById('mostPosTweet');
-        const posTweet = "<label class=\"feedbackLable\" for=\"posTweet\">Most positive tweet</label> <div value=\"posTweet\">" + output.mostPosTweet+ "</div>"
+        const posTweet = "<label class=\"feedbackLable\" for=\"posTweet\"><b>Most positive tweet</b> </label> <i value=\"posTweet\">" + output.mostPosTweet+ "</i>"
         mostPosTweet.innerHTML = posTweet;
 
         // mostPosTweet.innerHTML = "Most positive tweet: " + output.mostPosTweet;
@@ -97,7 +97,7 @@ document.getElementById('searchTwitterBtn').addEventListener('click', e => {
         mostPosNum.innerHTML = "Grade: " + output.mostPosNum;
 
         var mostNegTweet = document.getElementById('mostNegTweet');
-        const negTweet = "<label class=\"feedbackLable\" for=\"negTweet\">Most negative tweet</label> <div value=\"negTweet\">" + output.mostNegTweet+ "</div>"
+        const negTweet = "<label class=\"feedbackLable\" for=\"negTweet\"> <b>Most negative tweet</b> </label> <i value=\"negTweet\">" + output.mostNegTweet+ "</i"
         mostNegTweet.innerHTML = negTweet;
         // mostNegTweet.innerHTML = "Most negative tweet: " + output.mostNegTweet;
 
