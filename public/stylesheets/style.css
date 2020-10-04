@@ -654,3 +654,17 @@ p {
     }
 }
 /* result div */
+
+/* FADED HORIZONTAL SEPARATOR */
+.hrDiv{
+  /* padding-top:150px;
+  width: 900px; */
+  margin: 0 auto;
+}
+.line{ 
+  display:block;
+  height:1px;
+  border-top: 1px solid black;
+  border-image: linear-gradient(to right, transparent 0%,   #333 50%, transparent 100%);
+  border-image-slice: 1;   
+}    
