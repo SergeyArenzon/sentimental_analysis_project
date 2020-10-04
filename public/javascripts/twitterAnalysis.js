@@ -66,13 +66,22 @@ document.getElementById('searchTwitterBtn').addEventListener('click', e => {
         twitterOutput.innerHTML = "Avg: " + output.normalized;
         
         var twitterOutput = document.getElementById('positive');
-        twitterOutput.innerHTML = "Positive: " + output.positive.length;
+        const positive = "<label for=\"posVal\">Positive</label> <h5 value=\"posVal\">" + output.positive.length + "</h5>"
+        twitterOutput.innerHTML = positive;
+
+        // twitterOutput.innerHTML = "Positive: " + output.positive.length;
         
         var twitterOutput = document.getElementById('negative');
-        twitterOutput.innerHTML = "Negative: " + output.negative.length;
+        const negative = "<label for=\"negVal\">Negative</label> <h5 value=\"negVal\">" + output.negative.length + "</h5>"
+        twitterOutput.innerHTML = negative;
+        // twitterOutput.innerHTML = "Negative: " + output.negative.length;
 
         var twitterOutput = document.getElementById('neutral');
-        twitterOutput.innerHTML = "Neutral: " + output.neutral.length;
+        const neutral = "<label for=\"neuVal\">Neutral</label> <h5 value=\"neuVal\">" + output.neutral.length + "</h5>"
+        twitterOutput.innerHTML = neutral;
+        // twitterOutput.innerHTML = "Neutral: " + output.neutral.length;
+
+
 
         var mostPosTweet = document.getElementById('mostPosTweet');
         mostPosTweet.innerHTML = "Most positive tweet: " + output.mostPosTweet;
