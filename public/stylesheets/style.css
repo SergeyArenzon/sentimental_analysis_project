@@ -141,7 +141,7 @@ input{
 }
 /* SECOND BOX */
 .box:nth-child(2) {
-  background-image: url('/images/text.jpg');
+  background-image: url('/images/twitter.jpg');
 }
 
 .box:nth-child(2) .box__inner{
@@ -150,7 +150,7 @@ input{
 
 /* THIRD BOX */
 .box:nth-child(3) {
-  /* background-image: url('/images/text.jpg'); */
+  background-image: url('/images/http.jpg');
 }
 
 .box:nth-child(3) .box__inner{
