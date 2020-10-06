@@ -64,7 +64,7 @@ document.getElementById('searchTwitterBtn').addEventListener('click', e => {
 
         var twitterOutput = document.getElementById('avg');
 
-        const avg = "<label class=\"feedbackLable\" for=\"avgVal\">AVERAGE SCORE</label> <div value=\"avgVal\">" + output.normalized + "</div>"
+        const avg = "<label class=\"feedbackLable\" for=\"avgVal\">AVERAGE SCORE</label> <div value=\"avgVal\">" + output.normalized + "%" + "</div>"
         twitterOutput.innerHTML = avg;
 
         // twitterOutput.innerHTML = "Avg: " + output.normalized;
