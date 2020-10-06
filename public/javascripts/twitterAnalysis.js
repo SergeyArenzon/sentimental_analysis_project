@@ -12,11 +12,14 @@ const neutralSmile = '<div class="smiley"><div class="smiley-face"><div class="s
 
 document.getElementById('searchTwitterBtn').addEventListener('click', e => {
     e.preventDefault();
-
-
+    
+    document.getElementById('twitterDiv').style.display = 'none';
+    var x = document.getElementById("circle");
+    x.className = x.className.replace("resultDivOpened", "");
+    
     var loader = document.getElementById('loader');
     loader.style.display = 'block';
-
+ 
     // hides all irrelevant outputs divs after click
     let urlDiv = document.getElementById('urlDiv');
     let freeDiv = document.getElementById('freeDiv');
