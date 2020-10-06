@@ -51,10 +51,10 @@ document.getElementById('searchTwitterBtn').addEventListener('click', e => {
         showTwitterOutput.style.display = 'block';
 
         var feedbackSmiley = document.getElementById('feedbackSmiley');
-        if(output.normalized > 0){
+        if(output.normalized > 50){
             feedbackSmiley.innerHTML = happySmile;
         }
-        else if(output.normalized < 0) {
+        else if(output.normalized < 50) {
             feedbackSmiley.innerHTML = sadSmile;
         }
         else {
