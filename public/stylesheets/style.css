@@ -651,7 +651,7 @@ p {
     height: 100px;
   }
   to { 
-    width: 80%;
+    width: 70%;
     height: 450px;
     border-radius: 25px;
     }
@@ -683,4 +683,14 @@ hr {
   background-color: rgb(11, 116, 155);
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
   width: 50%;
+}
+
+#avgDiv {
+  text-align: center;
+  font-family: 'David Libre', serif;
+  font-weight: 500;
+  font-size: 3rem;
+  color: #fff;
+  margin-top: 10px;
+
 }

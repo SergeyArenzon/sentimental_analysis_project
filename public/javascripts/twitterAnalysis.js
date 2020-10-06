@@ -64,24 +64,24 @@ document.getElementById('searchTwitterBtn').addEventListener('click', e => {
 
         var twitterOutput = document.getElementById('avg');
 
-        const avg = "<label class=\"feedbackLable\" for=\"avgVal\">Avg</label> <h5 value=\"avgVal\">" + output.normalized + "</h5>"
+        const avg = "<label class=\"feedbackLable\" for=\"avgVal\">AVERAGE SCORE</label> <div value=\"avgVal\">" + output.normalized + "</div>"
         twitterOutput.innerHTML = avg;
 
         // twitterOutput.innerHTML = "Avg: " + output.normalized;
         
         var twitterOutput = document.getElementById('positive');
-        const positive = "<label class=\"feedbackLable\" for=\"posVal\">Positive</label> <h5 value=\"posVal\">" + output.positive.length + "</h5>"
+        const positive = "<label class=\"feedbackLable\" for=\"posVal\">Positive</label> <div value=\"posVal\">" + output.positive.length + "</div>"
         twitterOutput.innerHTML = positive;
 
         // twitterOutput.innerHTML = "Positive: " + output.positive.length;
         
         var twitterOutput = document.getElementById('negative');
-        const negative = "<label class=\"feedbackLable\" for=\"negVal\">Negative</label> <h5 value=\"negVal\">" + output.negative.length + "</h5>"
+        const negative = "<label class=\"feedbackLable\" for=\"negVal\">Negative</label> <div value=\"negVal\">" + output.negative.length + "</div>"
         twitterOutput.innerHTML = negative;
         // twitterOutput.innerHTML = "Negative: " + output.negative.length;
 
         var twitterOutput = document.getElementById('neutral');
-        const neutral = "<label class=\"feedbackLable\" for=\"neuVal\">Neutral</label> <h5 value=\"neuVal\">" + output.neutral.length + "</h5>"
+        const neutral = "<label class=\"feedbackLable\" for=\"neuVal\">Neutral</label> <div value=\"neuVal\">" + output.neutral.length + "</div>"
         twitterOutput.innerHTML = neutral;
         // twitterOutput.innerHTML = "Neutral: " + output.neutral.length;
 
