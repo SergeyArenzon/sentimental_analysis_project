@@ -116,6 +116,22 @@ router.post('/', (req, res, next) => {
 
             // normalized value = sum of vals / num of vals
             var normalized = (tweetsValue.reduce(reducer) / tweetsValue.length);
+            console.log(normalized)
+            var normalized = normalized * 20;
+            console.log(normalized)
+            normalized = Number.parseFloat(normalized).toFixed(1);
+            console.log(normalized)
+            if(normalized > 0) {
+                normalized = Math.ceil(normalized);
+            }
+            else if (normalized < 0) {
+                normalized = normalized * (-1);
+                normalized = (-1) * Math.ceil(normalized);
+            }
+            
+            console.log(normalized)
+            normalized = normalized + 50;
+            console.log(normalized)
 
             output.normalized =  Math.round(normalized * 100) / 100;
             output.mostPosTweet = mostPos_mostNeg[0];
