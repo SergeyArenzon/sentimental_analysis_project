@@ -5,6 +5,7 @@ body {
   margin: 40px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   text-align: -moz-center;
+  
 }
 button:focus { 
   outline: none; 
@@ -683,6 +684,7 @@ hr {
   background-color: rgb(11, 116, 155);
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
   width: 50%;
+ 
 }
 
 #avgDiv {
