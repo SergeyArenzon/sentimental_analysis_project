@@ -94,7 +94,7 @@ document.getElementById('searchTwitterBtn').addEventListener('click', e => {
 
         // polarity
         var twitterOutput = document.getElementById('polarity');
-        const polarity = "<label class=\"feedbackLable\" for=\"polVal\">Polarity</label> <div value=\"polVal\">" + output.normalized + "</div>"
+        const polarity = "<label class=\"feedbackLable\" for=\"polVal\">Polarity</label> <div value=\"polVal\">" + output.normalized + "%" +"</div>"
         twitterOutput.innerHTML = polarity;
 
 
