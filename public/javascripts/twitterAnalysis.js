@@ -92,6 +92,12 @@ document.getElementById('searchTwitterBtn').addEventListener('click', e => {
         twitterOutput.innerHTML = neutral;
         // twitterOutput.innerHTML = "Neutral: " + output.neutral.length;
 
+        // polarity
+        var twitterOutput = document.getElementById('polarity');
+        const polarity = "<label class=\"feedbackLable\" for=\"polVal\">Polarity</label> <div value=\"polVal\">" + output.normalized + "</div>"
+        twitterOutput.innerHTML = polarity;
+
+
 
 
         var mostPosTweet = document.getElementById('mostPosTweet');
