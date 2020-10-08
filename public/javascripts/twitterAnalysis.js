@@ -64,10 +64,14 @@ document.getElementById('searchTwitterBtn').addEventListener('click', e => {
             feedbackSmiley.innerHTML = neutralSmile;
         }
 
+        
+
 
         var twitterOutput = document.getElementById('avg');
 
-        const avg = "<label class=\"feedbackLable\" for=\"avgVal\"> <div id=\"avgTitle\">AVERAGE</div> <div id=\"scoreTitle\">SCORE</div> </label> <div style=\"font-size: 130px\" value=\"avgVal\">" + output.normalized + "%" + "</div>"
+
+            // output.normalized is polarity avg
+        const avg = "<label class=\"feedbackLable\" for=\"avgVal\"> <div id=\"avgTitle\">AVERAGE</div> <div id=\"scoreTitle\">SCORE</div> </label> <div style=\"font-size: 130px\" value=\"avgVal\">" + output.percent + "%" + "</div>"
         twitterOutput.innerHTML = avg;
 
         // twitterOutput.innerHTML = "Avg: " + output.normalized;

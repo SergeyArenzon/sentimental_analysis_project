@@ -60,6 +60,7 @@ router.post('/', (req, res, next) => {
             // exclude all repeated tweets            
             var unique_tweets = tweets_list.filter(onlyUnique);
             var tweetsValue = []
+            console.log(unique_tweets)
 
             mostPos_mostNeg = ['', 0, '', 0]; // CONTAINS MOST POS AND MOST NEG TWEETS
 
@@ -112,7 +113,14 @@ router.post('/', (req, res, next) => {
             });
             const reducer = (accumulator, currentValue) => accumulator + currentValue; //summing scores func
             
-            
+            // pos/neg tweets calculation
+            const posLen = output.positive.length;
+            const negLen = output.negative.length;
+
+            let percent = 100 * (posLen / (posLen + negLen));
+            percent = Number.parseFloat(percent).toFixed(1);
+            percent = Math.ceil(percent);
+
 
             // normalized value = sum of vals / num of vals
             var normalized = (tweetsValue.reduce(reducer) / tweetsValue.length);
@@ -138,15 +146,11 @@ router.post('/', (req, res, next) => {
             output.mostPosNum = mostPos_mostNeg[1];
             output.mostNegTweet = mostPos_mostNeg[2];
             output.mostNegNum = mostPos_mostNeg[3];
-            
+            output.percent = percent;
             console.log(mostPos_mostNeg)
             
-
-            // console.log(output);
             res.status(200).json({output})
-        //     console.log(normalized)
-        //     console.log("DONE")
-        //     res.status(200).json({normalized});
+  
         }
     });
 });
