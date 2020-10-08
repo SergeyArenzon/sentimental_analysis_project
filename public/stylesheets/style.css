@@ -688,9 +688,14 @@ hr {
 #avgDiv {
   text-align: center;
   font-family: 'David Libre', serif;
-  font-weight: 500;
+  font-weight: bold;
   font-size: 3rem;
   color: #fff;
   margin-top: 10px;
+}
+
+
+#scoreTitle {
+  font-size: 70px;
 
 }

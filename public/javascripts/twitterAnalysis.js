@@ -67,7 +67,7 @@ document.getElementById('searchTwitterBtn').addEventListener('click', e => {
 
         var twitterOutput = document.getElementById('avg');
 
-        const avg = "<label class=\"feedbackLable\" for=\"avgVal\">AVERAGE SCORE</label> <div value=\"avgVal\">" + output.normalized + "%" + "</div>"
+        const avg = "<label class=\"feedbackLable\" for=\"avgVal\"> <div id=\"avgTitle\">AVERAGE</div> <div id=\"scoreTitle\">SCORE</div> </label> <div style=\"font-size: 130px\" value=\"avgVal\">" + output.normalized + "%" + "</div>"
         twitterOutput.innerHTML = avg;
 
         // twitterOutput.innerHTML = "Avg: " + output.normalized;
@@ -91,7 +91,7 @@ document.getElementById('searchTwitterBtn').addEventListener('click', e => {
 
 
         var mostPosTweet = document.getElementById('mostPosTweet');
-        const posTweet = "<label class=\"feedbackLable\" for=\"posTweet\"><b>Most positive tweet</b> <div></label> <i value=\"posTweet\">" + output.mostPosTweet+ "</i> </div>"
+        const posTweet = "<label class=\"feedbackLable\" for=\"posTweet\"><b>Most positive tweet</b> <div></label> <i value=\"posTweet\">" + "\"" +  output.mostPosTweet+ "\"" +  "</i> </div>"
         mostPosTweet.innerHTML = posTweet;
 
         // mostPosTweet.innerHTML = "Most positive tweet: " + output.mostPosTweet;
@@ -100,7 +100,7 @@ document.getElementById('searchTwitterBtn').addEventListener('click', e => {
         mostPosNum.innerHTML = "Grade: " + output.mostPosNum;
 
         var mostNegTweet = document.getElementById('mostNegTweet');
-        const negTweet = "<label class=\"feedbackLable\" for=\"negTweet\"> <b>Most negative tweet</b> </label> <div> <i value=\"negTweet\">" + output.mostNegTweet+ "</i> </div>"
+        const negTweet = "<label class=\"feedbackLable\" for=\"negTweet\"> <b>Most negative tweet</b> </label> <div> <i value=\"negTweet\">" +"\"" +  output.mostNegTweet + "\"" + "</i> </div>"
         mostNegTweet.innerHTML = negTweet;
         // mostNegTweet.innerHTML = "Most negative tweet: " + output.mostNegTweet;
 
