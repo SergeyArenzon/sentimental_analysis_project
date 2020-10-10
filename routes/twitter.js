@@ -122,12 +122,12 @@ router.post('/', (req, res, next) => {
             }
             
             let posPolarity = posSum / output.positive.length;
-            posPolarity = Number.parseFloat(posPolarity).toFixed(1);
+            posPolarity = Number.parseFloat(posPolarity).toFixed(2);
             
             let negPolarity = negSum / output.negative.length;
             // console.log(negPolarity)
             negPolarity *= -1
-            negPolarity = Number.parseFloat(negPolarity).toFixed(1);
+            negPolarity = Number.parseFloat(negPolarity).toFixed(2);
             negPolarity *= -1
 
 
@@ -144,25 +144,28 @@ router.post('/', (req, res, next) => {
 
 
             // normalized value = sum of vals / num of vals
-            var normalized = (tweetsValue.reduce(reducer) / tweetsValue.length);
+            var normalized = (tweetsValue.reduce(reducer) / (posLen + negLen));
+            console.log(output);
+            console.log(tweetsValue.reduce(reducer))
+            console.log(posLen + negLen)
             // console.log(normalized)
-            var normalized = normalized * 20;
-            // console.log(normalized)
-            normalized = Number.parseFloat(normalized).toFixed(1);
-            // console.log(normalized)
-            if(normalized > 0) {
-                normalized = Math.ceil(normalized);
-            }
-            else if (normalized < 0) {
-                normalized = normalized * (-1);
-                normalized = (-1) * Math.ceil(normalized);
-            }
+            // var normalized = normalized * 20;
+            // // console.log(normalized)
+            // normalized = Number.parseFloat(normalized).toFixed(1);
+            // // console.log(normalized)
+            // if(normalized > 0) {
+            //     normalized = Math.ceil(normalized);
+            // }
+            // else if (normalized < 0) {
+            //     normalized = normalized * (-1);
+            //     normalized = (-1) * Math.ceil(normalized);
+            // }
             
-            // console.log(normalized)
-            normalized = normalized + 50;
-            // console.log(normalized)
+            // // console.log(normalized)
+            // normalized = normalized + 50;
+            // // console.log(normalized)
 
-            output.normalized =  Math.round(normalized * 100) / 100;
+            output.normalized =  normalized.toFixed(2);
             output.mostPosTweet = mostPos_mostNeg[0];
             output.mostPosNum = mostPos_mostNeg[1];
             output.mostNegTweet = mostPos_mostNeg[2];
