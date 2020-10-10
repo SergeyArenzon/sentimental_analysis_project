@@ -363,7 +363,7 @@ p {
   height: 150px;
   background: #fbb03b;
   background: radial-gradient(circle at 40% 40%, #fddf18 50%, #fbb03b, orange 95%);
-  box-shadow:10px 10git px 30px black;
+  box-shadow: 5px 5px 20px rgba(0,0,0,0.7);
   
   border-radius: 100%;
   position: relative;
