@@ -80,7 +80,7 @@ document.getElementById('searchTwitterBtn').addEventListener('click', e => {
         // twitterOutput.innerHTML = "Avg: " + output.normalized;
         
         var twitterOutput = document.getElementById('positive');
-        const positive = "<label class=\"feedbackLable\" for=\"posVal\">Positive</label> <div value=\"posVal\">" + output.positive.length + "</div>"
+        const positive = "<label id=\"positiveNum \" class=\"feedbackLable\" for=\"posVal\">Positive</label> <div value=\"posVal\">" + output.positive.length + "</div>"
         twitterOutput.innerHTML = positive;
 
         // twitterOutput.innerHTML = "Positive: " + output.positive.length;

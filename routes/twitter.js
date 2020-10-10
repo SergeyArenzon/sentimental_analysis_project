@@ -165,6 +165,8 @@ router.post('/', (req, res, next) => {
             // normalized = normalized + 50;
             // // console.log(normalized)
 
+
+            
             output.normalized =  normalized.toFixed(2);
             output.mostPosTweet = mostPos_mostNeg[0];
             output.mostPosNum = mostPos_mostNeg[1];
