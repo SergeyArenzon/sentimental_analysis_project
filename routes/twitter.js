@@ -111,6 +111,27 @@ router.post('/', (req, res, next) => {
 
 
             });
+
+
+            // neg and pos tweets polarity
+            let negSum = output.negative.reduce(myFunction)
+            let posSum = output.positive.reduce(myFunction);
+
+            function myFunction(total, value, index, array) {
+                return total + value;
+            }
+            
+            let posPolarity = posSum / output.positive.length;
+            posPolarity = Number.parseFloat(posPolarity).toFixed(1);
+            
+            let negPolarity = negSum / output.negative.length;
+            // console.log(negPolarity)
+            negPolarity *= -1
+            negPolarity = Number.parseFloat(negPolarity).toFixed(1);
+            negPolarity *= -1
+
+
+
             const reducer = (accumulator, currentValue) => accumulator + currentValue; //summing scores func
             
             // pos/neg tweets calculation
@@ -124,11 +145,11 @@ router.post('/', (req, res, next) => {
 
             // normalized value = sum of vals / num of vals
             var normalized = (tweetsValue.reduce(reducer) / tweetsValue.length);
-            console.log(normalized)
+            // console.log(normalized)
             var normalized = normalized * 20;
-            console.log(normalized)
+            // console.log(normalized)
             normalized = Number.parseFloat(normalized).toFixed(1);
-            console.log(normalized)
+            // console.log(normalized)
             if(normalized > 0) {
                 normalized = Math.ceil(normalized);
             }
@@ -137,9 +158,9 @@ router.post('/', (req, res, next) => {
                 normalized = (-1) * Math.ceil(normalized);
             }
             
-            console.log(normalized)
+            // console.log(normalized)
             normalized = normalized + 50;
-            console.log(normalized)
+            // console.log(normalized)
 
             output.normalized =  Math.round(normalized * 100) / 100;
             output.mostPosTweet = mostPos_mostNeg[0];
@@ -147,10 +168,10 @@ router.post('/', (req, res, next) => {
             output.mostNegTweet = mostPos_mostNeg[2];
             output.mostNegNum = mostPos_mostNeg[3];
             output.percent = percent;
-            console.log(mostPos_mostNeg)
+            output.negPolarity = negPolarity;
+            output.posPolarity = posPolarity;
             
             res.status(200).json({output})
-  
         }
     });
 });

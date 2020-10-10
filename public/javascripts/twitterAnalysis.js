@@ -100,8 +100,16 @@ document.getElementById('searchTwitterBtn').addEventListener('click', e => {
         const polarity = "<label class=\"feedbackLable\" for=\"polVal\">Polarity</label> <div value=\"polVal\">" + output.normalized + "%" +"</div>"
         twitterOutput.innerHTML = polarity;
 
+        // positive Polarity avg
+        var twitterOutput = document.getElementById('posPolarity');
+        const posPolarity = "<label class=\"feedbackLable\" for=\"posPolVal\">Positive polarity[0,5]</label> <div value=\"posPolVal\">" + output.posPolarity +"</div>"
+        twitterOutput.innerHTML = posPolarity;
 
 
+        // negative Polarity avg
+        var twitterOutput = document.getElementById('negPolarity');
+        const negPolarity = "<label class=\"feedbackLable\" for=\"negPolVal\">Negative polarity[-5,0]</label> <div value=\"negPolVal\">" + output.negPolarity +"</div>"
+        twitterOutput.innerHTML = negPolarity;
 
         var mostPosTweet = document.getElementById('mostPosTweet');
         const posTweet = "<label class=\"feedbackLable\" for=\"posTweet\"><b>Most positive tweet</b> <div></label> <i value=\"posTweet\">" + "\"" +  output.mostPosTweet+ "\"" +  "</i> </div>"
