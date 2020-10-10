@@ -191,7 +191,7 @@ input{
   color: #fff;
 }
 .myBtnBlue:hover {
-  color: #3498db;
+  color:#fff;
   transform: translateY(7px);
   transition: 0.4s;
   box-shadow: none;
@@ -240,7 +240,7 @@ input{
   color: #fff;
 }
 .myBtnPurple:hover {
-  color: rgb(94, 71, 157);
+  color: #fff;
   transform: translateY(7px);
   transition: 0.4s;
   box-shadow: none;
