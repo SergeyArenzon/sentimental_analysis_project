@@ -114,6 +114,23 @@ router.post('/', (req, res, next) => {
 
 
             // neg and pos tweets polarity
+            
+            // check for empty pos/neg tweets arr
+            let emptyPos = false;
+            let emptyNeg = false;
+
+            if(output.negative.length === 0){
+                emptyNeg = true;
+
+            }
+            if(output.positive.length === 0){
+                emptyPos = true;
+
+            }
+
+            
+
+
             let negSum = output.negative.reduce(myFunction)
             let posSum = output.positive.reduce(myFunction);
 
@@ -125,7 +142,7 @@ router.post('/', (req, res, next) => {
             posPolarity = Number.parseFloat(posPolarity).toFixed(2);
             
             let negPolarity = negSum / output.negative.length;
-            // console.log(negPolarity)
+
             negPolarity *= -1
             negPolarity = Number.parseFloat(negPolarity).toFixed(2);
             negPolarity *= -1
@@ -166,7 +183,7 @@ router.post('/', (req, res, next) => {
             // // console.log(normalized)
 
 
-            
+
             output.normalized =  normalized.toFixed(2);
             output.mostPosTweet = mostPos_mostNeg[0];
             output.mostPosNum = mostPos_mostNeg[1];

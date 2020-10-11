@@ -683,7 +683,7 @@ hr {
 }
 
 #circle {
-  background-color: rgb(11, 116, 155);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.18), rgba(0, 0, 0, 0.87)),url('/images/twitter-background.jpg');
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
   width: 50%;
  
@@ -721,3 +721,4 @@ h1 {
   font-weight: bold;
   font-style: italic;
 }
+
