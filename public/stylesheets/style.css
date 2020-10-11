@@ -734,6 +734,10 @@ h1 {
   margin-right: 7px;
 }
 
-.fa {
+.green {
   color: rgb(8, 66, 8);
+}
+
+.red {
+  color: rgb(187, 3, 3);
 }
