@@ -741,3 +741,9 @@ h1 {
 .red {
   color: rgb(187, 3, 3);
 }
+
+#growingInput {
+  height: 60px;
+  margin-bottom: 2px !important; 
+}
+
