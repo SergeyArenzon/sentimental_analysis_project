@@ -39,8 +39,9 @@ router.get('/', (req, res, next) => {
 
 router.post('/', (req, res, next) => {
     var searchQuery = req.body.twitterSearch; // search input from web page
-    var tweetsCount = req.body.tweetsCount;
-    //api that searches tweets by q, at most 100 tweets avalible by twitter api     
+    var tweetsCount = req.body.tweetsCount;   // user tweets count input
+
+    // Twitter api searches tweets by q, at most 100 tweets avalible by twitter api     
     client.get('search/tweets', {q: searchQuery, count: tweetsCount, lang: 'en'}, function(error, tweets, response) {
         if(error){console.log(error);}  
         else{
@@ -52,6 +53,7 @@ router.post('/', (req, res, next) => {
                 negative: [],
                 neutral: []
             }
+
             // loop over tweeted users and push them to tweets_list
             tweets.statuses.forEach(user => {               
                 tweets_list.push(user.text);              
@@ -60,6 +62,7 @@ router.post('/', (req, res, next) => {
             // exclude all repeated tweets            
             var unique_tweets = tweets_list.filter(onlyUnique);
             var tweetsValue = []
+
             console.log(unique_tweets)
 
             mostPos_mostNeg = ['', 0, '', 0]; // CONTAINS MOST POS AND MOST NEG TWEETS
@@ -67,18 +70,18 @@ router.post('/', (req, res, next) => {
 
             unique_tweets.forEach(tweet => {              
                 const input  = tweet; // get the user input
-                const lexedInput = aposToLexForm(input); // fixes examples: i'am to i am 
+                const lexedInput = aposToLexForm(input); // fixes examples: i'am to i am slangs
                 const casedInput = lexedInput.toLowerCase(); //to lower case
-                const alphaOnlyInput = casedInput.replace(/[^a-zA-Z\s]+/g, ''); //removing non alphabetical
-                //console.log(alphaOnlyInput)
+                const alphaOnlyInput = casedInput.replace(/[^a-zA-Z\s]+/g, ''); //removing non alphabetical signs
+
                 const { WordTokenizer } = natural;
                 const tokenizer = new WordTokenizer();
                 const tokenizedInput = tokenizer.tokenize(alphaOnlyInput); // tokenize the input string
                 tokenizedInput.forEach((word, index) => {
-                    tokenizedInput[index] = spellCorrector.correct(word);  // correct spellings
+                    tokenizedInput[index] = spellCorrector.correct(word);  // correct spellings 
                 })
 
-                const filteredInput = SW.removeStopwords(tokenizedInput); // removes unrelevant words
+                const filteredInput = SW.removeStopwords(tokenizedInput); // removes unrelevant words(is, a, for, the)
 
                 const { SentimentAnalyzer, PorterStemmer } = natural;
 
