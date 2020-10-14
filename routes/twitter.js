@@ -132,11 +132,23 @@ router.post('/', (req, res, next) => {
             }
 
             
+            let negSum = 0;
+            if(output.negative.length === 0) {
+                negSum = 0;
+            }else {
+                negSum = output.negative.reduce(myFunction);
+            }
+             
 
 
-            let negSum = output.negative.reduce(myFunction)
-            let posSum = output.positive.reduce(myFunction);
+            let posSum = 0;
+            if(output.positive.length === 0) {
+                posSum = 0;
+            }else {
+                posSum = output.positive.reduce(myFunction);
+            }
 
+            
             function myFunction(total, value, index, array) {
                 return total + value;
             }
