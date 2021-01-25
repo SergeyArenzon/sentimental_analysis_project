@@ -8,23 +8,19 @@ https://tweets-sanalysis.herokuapp.com/
 
 
 ### Introduction
-Web app 
+Web app helps you to collect latest opinion by Twitter comments. 
 
 ### Features
-* Create consumer user
-* Login to your user
-* Add your ingredients to your burger
-* Order it!
-* Check all your orders history
+* Analyze latest twitter posts by any query you like.
+* Analyze free text positivity
+* Analyze text opinion by given URL 
 
 
 ### Technologies
 Project created with:
 * NodeJS
 * ExpressJS
-* MongoDB
-* ReactJS
-* Redux
+* Twitter API
 
 ### Setup
 To run this project, install it locally using npm:
