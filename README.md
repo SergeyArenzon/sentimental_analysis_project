@@ -9,7 +9,7 @@ https://tweets-sanalysis.herokuapp.com/
 
 
 ### Introduction
-Web app helps you to collect latest opinion by Twitter comments. 
+Web app helps you to collect latest opinion by Twitter comments and returns some interesting statistics. 
 
 ### Features
 * Analyze latest twitter posts by any query you like.
