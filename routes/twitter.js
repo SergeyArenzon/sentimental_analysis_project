@@ -47,6 +47,8 @@ router.post('/', (req, res, next) => {
         else{
             var tweets_list = [];
 
+
+            
             // contains pos/neg tweets scores
             var output = {
                 positive: [],
