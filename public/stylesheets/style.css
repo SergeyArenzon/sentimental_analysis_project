@@ -119,6 +119,7 @@ input{
     padding: 20px;
     min-height: 300px;
     background-color: rgba(17, 155, 201, 0.65);
+    text-align: center;
    
 }
 .box:hover {
@@ -293,8 +294,8 @@ input{
 .titleText {
   
   width: 100%;
-  left: 50%;
-  margin-left: -225px;
+  /* left: 50%; */
+  /* margin-left: -225px; */
   height: 40px;
   top: 50%;
   margin-top: -20px;
@@ -569,6 +570,7 @@ p {
   height: 64px;
   border-radius: 50%;
   perspective: 800px;
+  margin: 0 auto;
 }
 
 .inner {
@@ -746,4 +748,3 @@ h1 {
   height: 60px;
   margin-bottom: 2px !important; 
 }
-
