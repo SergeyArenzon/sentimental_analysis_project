@@ -1,6 +1,6 @@
 # Sentimental Analysis Web Tool
 
-![](./readmeFiles/twitter.png)
+![](./readmeFile/twitter.png)
 
 
 ### Live Demo
