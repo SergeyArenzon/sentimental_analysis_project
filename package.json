@@ -17,7 +17,7 @@
     "jade": "~1.11.0",
     "moment": "^2.25.3",
     "morgan": "~1.9.1",
-    "natural": "^2.1.5",
+    "natural": "^2.4.5",
     "nodemon": "^2.0.7",
     "request": "^2.88.2",
     "spelling-corrector": "^3.0.0",
